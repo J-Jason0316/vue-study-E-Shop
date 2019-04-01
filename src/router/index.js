@@ -9,24 +9,29 @@ Vue.use(Router);
 
 export default new Router({
 	routes: [
+        {
+            path: '/',
+			name: 'Home',
+			redirect:'/home'
+        },
 		{
 			path: '/home',
-			// name: 'HomeContainer',
+			name: 'HomeContainer',
 			component: HomeContainer
 		},
 		{
 			path: '/member',
-			// name: 'MemberContainer',
+			name: 'MemberContainer',
 			component: MemberContainer
 		},
 		{
 			path: '/shopping-cart',
-			// name: 'ShoppingCartContainer',
+			name: 'ShoppingCartContainer',
 			component: ShoppingCartContainer
 		},
 		{
 			path: '/search',
-			// name: 'SearchContainer',
+			name: 'SearchContainer',
 			component: SearchContainer
 		}
 	],

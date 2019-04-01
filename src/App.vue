@@ -4,7 +4,9 @@
         <mt-header fixed title="固定在顶部"></mt-header>
 
         <!-- body -->
-        <router-view></router-view>
+        <transition>
+            <router-view></router-view>
+        </transition>
 
         <!-- footer -->
         <nav class="mui-bar mui-bar-tab">
@@ -30,7 +32,7 @@
 
         <!-- <img src="./assets/logo.png">
         <router-view/>-->
-        <h1>123</h1>
+        <!-- <h1>123</h1> -->
     </div>
 </template>
 
@@ -48,5 +50,21 @@ export default {
     text-align: center;
     color: #2c3e50; */
     margin-top: 40px;
+    overflow-x: hidden;
+}
+
+.v-enter {
+    opacity: 0;
+    transform: translateX(100%);
+}
+.v-leave-to {
+    opacity: 0;
+    transform: translateX(-100%);
+    position: absolute;
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: all 0.5s ease;
 }
 </style>
