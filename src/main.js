@@ -5,12 +5,15 @@ import App from './App'
 import router from './router'
 
 // 按需导入mint-ui
-import { Header } from 'mint-ui';
+import { Header, Swipe, SwipeItem } from 'mint-ui';
 Vue.component(Header.name, Header);
+Vue.component(Swipe.name, Swipe);
+Vue.component(SwipeItem.name, SwipeItem);
 
 
 // 导入mui样式
 import './lib/mui/css/mui.min.css'
+import './lib/mui/css/icons-extra.css'
 
 //设置为 false 以阻止 vue 在启动时生成生产提示
 Vue.config.productionTip = false  
